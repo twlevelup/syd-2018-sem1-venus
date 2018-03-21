@@ -35,7 +35,7 @@ jobs:
       - run: npm run build
       - add_ssh_keys:
           fingerprints:
-            - "f8:50:be:36:9a:81:a0:17:78:6c:ce:ae:58:23:a8:b5"
+            - "0f:87:a5:c7:c3:f3:9c:50:5e:31:3a:fb:24:1f:b9:59"
       - run: ./deploy.sh
 
 workflows:
