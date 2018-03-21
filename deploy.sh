@@ -14,7 +14,7 @@ cd gh-pages-branch
 git config --global user.email levelup@thoughtworks.com > /dev/null 2>&1
 git config --global user.name levelup > /dev/null 2>&1
 git init
-git remote add --fetch origin https://github.com/twlevelup/syd-2018-sem1-jupiter.git
+git remote add --fetch origin https://github.com/twlevelup/syd-2018-sem1-venus.git
 
 
 # switch into the the gh-pages branch
