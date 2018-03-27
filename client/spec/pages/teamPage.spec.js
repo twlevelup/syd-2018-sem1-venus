@@ -12,6 +12,14 @@ describe('TeamPage', () => {
       const page = new TeamPage();
       expect(page.template()).toContain("<h1>Made by:</h1>");
     });
+
+    it('should contain team members names', () => {
+      const page = new TeamPage();
+      expect(page.template()).toContain("Teresa");
+      expect(page.template()).toContain("Harris");
+    });
   });
 
 });
+
+// ./gp test:dv
