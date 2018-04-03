@@ -17,7 +17,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('contacts');
+    this.navigate('call police');
   }
 
   leftButtonEvent(){
