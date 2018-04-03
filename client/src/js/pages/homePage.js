@@ -24,8 +24,8 @@ class HomePage extends BasePage {
     this.navigate('demo');
   }
 
-  topButtonEvent() {
-    this.watchFace.scrollTop -= 40;
+  topButtonEvent(){
+    this.navigate('alarm');
   }
 
   bottomButtonEvent() {

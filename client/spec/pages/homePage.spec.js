@@ -39,31 +39,31 @@ describe('HomePage', () => {
     });
   });
 
-  // describe('#topButtonEvent', () => {
-  //   it('should take the user to the alarm page', () => {
-  //     const props = {
-  //     navigate: () => { },
-  //   };
-  //
-  //   const page = new HomePage(props);
-  //   spyOn(page, 'navigate');
-  //
-  //   page.topButtonEvent();
-  //   expect(page.navigate).toHaveBeenCalledWith('alarm');
-  //   });
-  // });
-
-  describe('#leftButtonEvent', () => {
-  it('should take the user to the demo page', () => {
-    const props = {
+  describe('#topButtonEvent', () => {
+    it('should take the user to the alarm page', () => {
+      const props = {
       navigate: () => { },
     };
 
     const page = new HomePage(props);
     spyOn(page, 'navigate');
 
-    page.leftButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('demo');
+    page.topButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('alarm');
+    });
   });
-});
+
+  describe('#leftButtonEvent', () => {
+    it('should take the user to the demo page', () => {
+      const props = {
+        navigate: () => { },
+      };
+
+      const page = new HomePage(props);
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('demo');
+    });
+  });
 });
