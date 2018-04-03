@@ -20,6 +20,10 @@ class HomePage extends BasePage {
     this.navigate('contacts');
   }
 
+  leftButtonEvent(){
+    this.navigate('demo');
+  }
+
   topButtonEvent() {
     this.watchFace.scrollTop -= 40;
   }

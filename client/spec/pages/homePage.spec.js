@@ -39,13 +39,31 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#topButtonEvent', () => {
-    it('scrolls page up', () => {
-      const page = new HomePage({ watchFace });
+  // describe('#topButtonEvent', () => {
+  //   it('should take the user to the alarm page', () => {
+  //     const props = {
+  //     navigate: () => { },
+  //   };
+  //
+  //   const page = new HomePage(props);
+  //   spyOn(page, 'navigate');
+  //
+  //   page.topButtonEvent();
+  //   expect(page.navigate).toHaveBeenCalledWith('alarm');
+  //   });
+  // });
 
-      page.topButtonEvent();
+  describe('#leftButtonEvent', () => {
+  it('should take the user to the demo page', () => {
+    const props = {
+      navigate: () => { },
+    };
 
-      expect(watchFace.scrollTop).toEqual(-40);
-    });
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.leftButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('demo');
   });
+});
 });
