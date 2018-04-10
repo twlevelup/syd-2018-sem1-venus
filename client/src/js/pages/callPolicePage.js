@@ -5,6 +5,10 @@ class CallPolicePage extends BasePage {
   template() {
     return compiledTemplate();
   }
+
+  faceButtonEvent() {
+    this.navigate('police notifications');
+  }
 }
 
 module.exports = CallPolicePage;

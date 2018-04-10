@@ -13,4 +13,17 @@ describe("The Call Police Page", () => {
       expect(page.template()).toContain("call police");
     });
   });
+  describe('#faceButtonEvent', () => {
+  it('should take the user to the police notifications page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new CallPolicePage(props);
+    spyOn(page, 'navigate');
+
+    page.faceButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('police notifications');
+  });
+});
 });
