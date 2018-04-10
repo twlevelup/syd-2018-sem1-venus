@@ -13,4 +13,18 @@ describe('The Alarm Page', () => {
       expect(page.template()).toContain('Alarm On');
     });
   });
+
+  describe('#bottomButtonEvent', () => {
+    it('should take the user back to home page', () => {
+      const props = {
+      navigate: () => { },
+    };
+
+    const page = new AlarmPage(props);
+    spyOn(page, 'navigate');
+
+    page.bottomButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 });
