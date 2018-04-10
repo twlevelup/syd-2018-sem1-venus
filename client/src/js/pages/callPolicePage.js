@@ -1,3 +1,6 @@
+require('../../styles/pages/callPolicePage.scss');
+
+
 const BasePage = require("watch-framework").BasePage;
 const compiledTemplate = require('../../templates/callPolicePage.hbs');
 
