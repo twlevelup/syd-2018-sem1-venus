@@ -10,7 +10,7 @@ describe("The Call Police Page", () => {
   describe("#template", () => {
     it("should contain the correct text", () => {
       const page = new CallPolicePage();
-      expect(page.template()).toContain("Call Police");
+      expect(page.template()).toContain("call police");
     });
   });
 });
