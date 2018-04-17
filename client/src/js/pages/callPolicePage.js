@@ -12,7 +12,7 @@ class CallPolicePage extends BasePage {
    this.navigate('/');
  }
   faceButtonEvent() {
-    this.navigate('police notifications');
+    this.navigate('policeNotifications');
   }
 
   leftButtonEvent() {

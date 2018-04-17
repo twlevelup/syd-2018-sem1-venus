@@ -23,7 +23,7 @@ describe("The Call Police Page", () => {
       spyOn(page, 'navigate');
 
       page.faceButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('police notifications');
+      expect(page.navigate).toHaveBeenCalledWith('policeNotifications');
     });
   });
 
