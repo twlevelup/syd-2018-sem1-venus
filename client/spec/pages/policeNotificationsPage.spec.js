@@ -13,4 +13,18 @@ describe('The Police Notifications Page', () => {
       expect(page.template()).toContain('Police have been notified');
     });
   });
+
+  describe('#leftButtonEvent', () => {
+    it('should take the user to the home page', () => {
+      const props = {
+        navigate: () => { },
+      };
+
+      const page = new PoliceNotificationsPage(props);
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 });
