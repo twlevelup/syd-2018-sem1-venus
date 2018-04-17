@@ -5,7 +5,7 @@ class FourOhFourPage extends BasePage {
   template() {
     return compiledTemplate();
   }
-  leftButtonEvent() {
+   leftButtonEvent() {
     this.navigate('/');
   }
   rightButtonEvent() {

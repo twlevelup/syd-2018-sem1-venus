@@ -5,6 +5,9 @@ class DemoPage extends BasePage {
   template() {
     return compiledTemplate();
   }
+  rightButtonEvent() {
+    this.navigate('/');
+  }
 }
 
 module.exports = DemoPage;
