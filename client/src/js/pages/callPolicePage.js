@@ -12,6 +12,10 @@ class CallPolicePage extends BasePage {
   faceButtonEvent() {
     this.navigate('police notifications');
   }
+
+  leftButtonEvent() {
+    this.navigate('/');
+  }
 }
 
 module.exports = CallPolicePage;

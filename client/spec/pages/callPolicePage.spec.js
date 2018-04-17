@@ -14,16 +14,31 @@ describe("The Call Police Page", () => {
     });
   });
   describe('#faceButtonEvent', () => {
-  it('should take the user to the police notifications page', () => {
-    const props = {
-      navigate: () => { },
-    };
+    it('should take the user to the police notifications page', () => {
+      const props = {
+        navigate: () => { },
+      };
 
-    const page = new CallPolicePage(props);
-    spyOn(page, 'navigate');
+      const page = new CallPolicePage(props);
+      spyOn(page, 'navigate');
 
-    page.faceButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('police notifications');
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('police notifications');
+    });
   });
-});
+
+  describe('#leftButtonEvent', () => {
+    it('should take the user to the home page', () => {
+      const props = {
+        navigate: () => { },
+      };
+
+      const page = new CallPolicePage(props);
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+
 });
