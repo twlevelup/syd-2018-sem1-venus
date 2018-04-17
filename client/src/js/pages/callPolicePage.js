@@ -8,7 +8,9 @@ class CallPolicePage extends BasePage {
   template() {
     return compiledTemplate();
   }
-
+  leftButtonEvent() {
+   this.navigate('/');
+ }
   faceButtonEvent() {
     this.navigate('police notifications');
   }
