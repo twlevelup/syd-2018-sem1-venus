@@ -22,5 +22,3 @@ describe('TeamPage', () => {
   });
 
 });
-
-// ./gp test:dv
