@@ -1,3 +1,5 @@
+require("../../styles/pages/alarmPage.scss");
+
 const BasePage = require('watch-framework').BasePage;
 const compiledTemplate = require('../../templates/alarmPage.hbs');
 
