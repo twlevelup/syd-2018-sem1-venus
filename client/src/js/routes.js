@@ -14,6 +14,6 @@ module.exports = {
   '404': FourOhFour,
   'demo': DemoPage,
   'alarm': AlarmPage,
-  'call police': CallPolicePage,
+  'callPolice': CallPolicePage,
   'police notifications': PoliceNotificationsPage
 };

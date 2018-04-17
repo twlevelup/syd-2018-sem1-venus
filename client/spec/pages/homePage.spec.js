@@ -23,7 +23,7 @@ describe('HomePage', () => {
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('call police');
+      expect(page.navigate).toHaveBeenCalledWith('callPolice');
     });
   });
 
