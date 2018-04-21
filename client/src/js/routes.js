@@ -16,7 +16,7 @@ module.exports = {
   "demo": DemoPage,
   "alarm": AlarmPage,
   "alarmTemp": AlarmPageTemp,
-  "call police": CallPolicePage,
+  "callPolice": CallPolicePage,
   "police notifications": PoliceNotificationsPage
 
 };
