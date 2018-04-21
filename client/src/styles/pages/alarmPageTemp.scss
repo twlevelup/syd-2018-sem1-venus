@@ -1,0 +1,19 @@
+body {
+ background: white;
+}
+#inactive {
+ background-color: red;
+ -webkit-border-radius: 10px;
+ border-radius: 50%;
+ border: none;
+ color: #FFFFFF;
+ cursor: pointer;
+ display: inline-block;
+ width: 200px;
+ height: 200px;
+ font-family: Arial;
+ font-size: 20px;
+ padding: 50px 10px;
+ text-align: center;
+ text-decoration: none;
+}

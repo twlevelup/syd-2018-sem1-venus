@@ -14,8 +14,8 @@ describe('The Alarm Page', () => {
     });
   });
 
-  describe('#bottomButtonEvent', () => {
-    it('should take the user back to home page', () => {
+  describe('#faceButtonEvent', () => {
+    it('should take the user back to alarm temp page', () => {
       const props = {
       navigate: () => { },
     };
@@ -23,8 +23,8 @@ describe('The Alarm Page', () => {
     const page = new AlarmPage(props);
     spyOn(page, 'navigate');
 
-    page.bottomButtonEvent();
-    expect(page.navigate).toHaveBeenCalledWith('/');
+    page.faceButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith("alarmTemp");
     });
   });
 });

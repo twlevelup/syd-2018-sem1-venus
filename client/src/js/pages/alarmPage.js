@@ -1,18 +1,20 @@
 require("../../styles/pages/alarmPage.scss");
 
-const BasePage = require('watch-framework').BasePage;
-const compiledTemplate = require('../../templates/alarmPage.hbs');
-
+const BasePage = require("watch-framework").BasePage;
+const compiledTemplate = require("../../templates/alarmPage.hbs");
 
 class AlarmPage extends BasePage {
   template() {
-    var sound = new Audio('client/src/audio/alarm.mp3');
+    var sound = new Audio("client/src/audio/alarm.mp3");
     sound.play();
     sound.loop = true;
     return compiledTemplate();
   }
   bottomButtonEvent() {
-    this.navigate('/');
+    this.navigate("/");
+  }
+  faceButtonEvent() {
+    this.navigate("alarmTemp");
   }
 }
 
