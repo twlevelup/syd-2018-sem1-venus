@@ -9,7 +9,6 @@ const CallPolicePage = require("./pages/callPolicePage");
 const PoliceNotificationsPage = require("./pages/policeNotificationsPage");
 
 module.exports = {
-
   "/": HomePage,
   "contacts": ContactsPage,
   "team": TeamPage,
@@ -19,4 +18,5 @@ module.exports = {
   "alarmTemp": AlarmPageTemp,
   "call police": CallPolicePage,
   "police notifications": PoliceNotificationsPage
+
 };
