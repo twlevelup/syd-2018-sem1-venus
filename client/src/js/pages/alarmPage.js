@@ -2,8 +2,9 @@ require("../../styles/pages/alarmPage.scss");
 
 const BasePage = require("watch-framework").BasePage;
 const compiledTemplate = require("../../templates/alarmPage.hbs");
+const alarm = require("../../audio/alarm.mp3");
 
-var sound = new Audio("client/src/audio/alarm.mp3");
+var sound = new Audio(alarm);
 
 class AlarmPage extends BasePage {
   template() {
