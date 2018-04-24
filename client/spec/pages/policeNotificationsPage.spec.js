@@ -37,4 +37,18 @@ describe('The Police Notifications Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+  describe('#topButtonEvent', () => {
+    it('should take the user to the cancel page', () => {
+      const props = {
+        navigate: () => { },
+      };
+
+      const page = new PoliceNotificationsPage(props);
+      spyOn(page, 'navigate');
+
+      page.topButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('cancelCallPolicePage');
+    });
+  });
 });

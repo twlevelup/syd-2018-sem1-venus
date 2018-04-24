@@ -17,6 +17,10 @@ class policeNotificationsPage extends BasePage {
   leftButtonEvent() {
     this.navigate('/');
   }
+
+  topButtonEvent() {
+    this.navigate('cancelCallPolicePage');
+  }
 }
 
 module.exports = policeNotificationsPage;
