@@ -17,6 +17,6 @@ module.exports = {
   "alarm": AlarmPage,
   "alarmTemp": AlarmPageTemp,
   "callPolice": CallPolicePage,
-  "police notifications": PoliceNotificationsPage
+  "policeNotifications": PoliceNotificationsPage
 
 };

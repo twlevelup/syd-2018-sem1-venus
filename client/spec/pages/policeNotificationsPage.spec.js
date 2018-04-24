@@ -12,6 +12,16 @@ describe('The Police Notifications Page', () => {
       const page = new PoliceNotificationsPage();
       expect(page.template()).toContain('Police have been notified');
     });
+
+    it('should contain estimated arrival time', () => {
+      const page = new PoliceNotificationsPage();
+      expect(page.template()).toContain('Estimated Arrival Time:');
+    });
+
+    it('should contain current time', () => {
+      const page = new PoliceNotificationsPage();
+      expect(page.template()).toContain('Current Time:');
+    });
   });
 
   describe('#leftButtonEvent', () => {
