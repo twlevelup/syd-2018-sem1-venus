@@ -10,7 +10,7 @@ describe("The Alarm Temp Page", () => {
   describe("#template", () => {
     it("should contain the correct text", () => {
       const page = new AlarmPageTemp();
-      expect(page.template()).toContain("alarm");
+      expect(page.template()).toContain("Press to turn Alarm on");
     });
   });
 
