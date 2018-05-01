@@ -17,7 +17,11 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('callPolice');
+    if (this.policeCalled == true) {
+      this.navigate('policeNotifications');
+    } else {
+      this.navigate('callPolice');
+    }
   }
 
   leftButtonEvent() {

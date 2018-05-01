@@ -15,7 +15,7 @@ describe('HomePage', () => {
   });
 
   describe('#rightButtonEvent', () => {
-    it('goes to call police page', () => {
+    it('goes to call police page, if police have not previously been called', () => {
       const props = {
         navigate: () => { },
       };
@@ -24,6 +24,18 @@ describe('HomePage', () => {
 
       page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('callPolice');
+    });
+
+    it('goes to eta page, if police have previously been called', () => {
+      const props = {
+        navigate: () => { },
+        policeCalled: true,
+      };
+      const page = new HomePage(props);
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('policeNotifications');
     });
   });
 
@@ -56,6 +68,7 @@ describe('HomePage', () => {
   it('should take the user to the demo page', () => {
     const props = {
       navigate: () => { },
+
     };
 
     const page = new HomePage(props);
