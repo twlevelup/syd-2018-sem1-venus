@@ -5,7 +5,7 @@
 .fa-arrow-circle-up {
   position: absolute;
   top: 0px;
-  left: 40%;
+  left: 42%;
 }
 
 .fa-arrow-circle-down {
@@ -16,11 +16,27 @@
 
 .button-label {
   font-size: 10pt;
-  padding-top: 3px;
-  padding-left: 50px;
+  padding-top: 10px;
+  padding-left: 60px;
 }
 
 .eta-label {
   padding-top: 16px;
   padding-left: 56px;
+}
+
+.notification-text {
+  color: #C74141;
+  font-family: 'OpenSans-Bold';
+  text-align: center;
+  font-weight: 900;
+  margin-left: -41px;
+  font-size: 25px;
+
+}
+
+.time {
+  margin-top: 20px;
+  text-align: center;
+  margin-left:-42px;
 }

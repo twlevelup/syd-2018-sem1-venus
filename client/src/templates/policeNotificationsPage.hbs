@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <i class="fas fa-arrow-circle-up"></i>
 <p class="button-label">Cancel Call</p>
-<div class="notification"><strong>Police have been notified</strong></div>
+<div class="notification notification-text">Police have been notified</div>
 
-<div class="notification">Estimated Arrival Time:</div>
-<span class="clock-time">{{eta_time}}</span>
+<div class="time">
+  <div class="notification">ETA:</div>
+  {{eta_time}}
 
-<div class="notification">Current Time:</div>
-<span class="clock-time">{{time}}</span>
+  <span class="current-time">
+    <div class="notification">Current Time:</div>
+    {{time}}
+  </span>
+</div>

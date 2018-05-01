@@ -15,7 +15,7 @@ describe('The Police Notifications Page', () => {
 
     it('should contain estimated arrival time', () => {
       const page = new PoliceNotificationsPage();
-      expect(page.template()).toContain('Estimated Arrival Time:');
+      expect(page.template()).toContain('ETA:');
     });
 
     it('should contain current time', () => {

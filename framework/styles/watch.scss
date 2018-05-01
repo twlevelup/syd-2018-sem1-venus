@@ -114,7 +114,12 @@ padding-left: 1.5em;
 
 
 .notification{
-  font-size: 19px;
-  margin-right: 9%;
-    margin-top: 9%;
+  display: inline-block;
+  font-size: 14px;
+  // margin-right: 9%;
+  //   margin-top: 9%;
+}
+
+.current-time {
+  display: block;
 }
