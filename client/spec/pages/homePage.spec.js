@@ -28,13 +28,14 @@ describe('HomePage', () => {
   });
 
   describe('#bottomButtonEvent', () => {
-    it('scrolls page down', () => {
+    it('should take the user to the survey page', () => {
+      const props = { navigate: () => {} };
 
-      const page = new HomePage({ watchFace });
+      const page = new HomePage(props);
+      spyOn(page, "navigate");
 
       page.bottomButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(40);
+      expect(page.navigate).toHaveBeenCalledWith("survey");
 
     });
   });
