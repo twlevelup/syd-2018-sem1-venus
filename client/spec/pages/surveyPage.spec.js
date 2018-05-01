@@ -1,4 +1,5 @@
 const SurveyPage = require("../../src/js/pages/surveyPage");
+const SurveySubmitPage = require("../../src/js/pages/surveySubmitPage");
 
 describe("The Survey Page", () => {
   let watchFace;
@@ -14,27 +15,16 @@ describe("The Survey Page", () => {
     });
   });
 
-   // describe("#bottomButtonEvent", () => {
-   //   it("should take the user back to home page", () => {
-   //     const props = { navigate: () => {} };
-   //
-   //     const page = new AlarmPageTemp(props);
-   //     spyOn(page, "navigate");
-   //
-   //     page.bottomButtonEvent();
-   //     expect(page.navigate).toHaveBeenCalledWith("/");
-   //   });
-   // });
 
-   // describe("#faceButtonEvent", () => {
-   //   it("should take user to alarm page", () => {
-   //     const props = { navigate: () => {} };
-   //
-   //     const page = new AlarmPageTemp(props);
-   //     spyOn(page, "navigate");
-   //
-   //     page.faceButtonEvent();
-   //     expect(page.navigate).toHaveBeenCalledWith("alarm");
-   //   });
-   // });
+   describe("#faceButtonEvent", () => {
+     it("should take user to submit page", () => {
+       const props = { navigate: () => {} };
+
+       const page = new SurveyPage(props);
+       spyOn(page, "navigate");
+
+       page.faceButtonEvent();
+       expect(page.navigate).toHaveBeenCalledWith("surveySubmit");
+     });
+   });
 });

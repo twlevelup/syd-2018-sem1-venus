@@ -30,26 +30,26 @@ input + svg {
 }
 
 
-input[class="positive"]:hover + svg,
-input[class="positive"]:checked + svg,
-input[class="positive"]:focus + svg {
+input[class="1"]:hover + svg,
+input[class="1"]:checked + svg,
+input[class="1"]:focus + svg {
   fill: rgb(0, 204, 79);
 }
 
-input[class="okay"]:hover + svg,
-input[class="okay"]:checked + svg,
-input[class="okay"]:focus + svg {
+input[class="2"]:hover + svg,
+input[class="2"]:checked + svg,
+input[class="2"]:focus + svg {
   fill: rgb(232, 214, 0);
 }
 
-input[class="not-good"]:hover + svg,
-input[class="not-good"]:checked + svg,
-input[class="not-good"]:focus + svg {
+input[class="3"]:hover + svg,
+input[class="3"]:checked + svg,
+input[class="3"]:focus + svg {
   fill: rgb(229, 132, 0);
 }
 
-input[class="terrible"]:hover + svg,
-input[class="terrible"]:checked + svg,
-input[class="terrible"]:focus + svg {
+input[class="4"]:hover + svg,
+input[class="4"]:checked + svg,
+input[class="4"]:focus + svg {
   fill: rgb(239, 42, 16);
 }
