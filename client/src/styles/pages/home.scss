@@ -1,3 +1,26 @@
 #home {
   font-style: italic;
 }
+
+.fa-arrow-circle-up {
+  position: absolute;
+  top: 0px;
+  left: 40%;
+}
+
+.fa-arrow-circle-down {
+  position: absolute;
+  bottom: 0px;
+  left: 42%;
+}
+
+.button-label {
+  font-size: 10pt;
+  padding-top: 3px;
+  padding-left: 50px;
+}
+
+.eta-label {
+  padding-top: 16px;
+  padding-left: 56px;
+}
