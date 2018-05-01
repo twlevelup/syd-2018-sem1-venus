@@ -9,7 +9,7 @@ const compiledTemplate = require('../../templates/surveyPage.hbs');
 // click face to submit (go to 'thank you' page)
 
 let potentialResponses = [1,2,3,4];
-let index = 0;
+let index = 1;
 
 
 class SurveyPage extends BasePage {
