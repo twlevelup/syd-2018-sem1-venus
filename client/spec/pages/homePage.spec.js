@@ -14,8 +14,8 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#rightButtonEvent', () => {
-    it('goes to call police page, if police have not previously been called', () => {
+  describe('#rightButtonEventUnlocked', () => {
+    it('goes to call police page', () => {
       const props = {
         navigate: () => { },
       };
@@ -25,34 +25,63 @@ describe('HomePage', () => {
       page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('callPolice');
     });
+  });
 
-    it('goes to eta page, if police have previously been called', () => {
+  describe('#rightButtonEventLocked', () => {
+    it('should stay on homePage', () => {
       const props = {
         navigate: () => { },
-        policeCalled: true,
+        locked: true,
       };
       const page = new HomePage(props);
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('policeNotifications');
+      expect(page.navigate).not.toHaveBeenCalledWith('callPolice');
     });
   });
 
-  describe('#bottomButtonEvent', () => {
-    it('should take the user to the survey page', () => {
+  describe('#bottomButtonEventUnlocked', () => {
+    it('scrolls page down', () => {
+
+      const page = new HomePage({ watchFace });
+
+      page.bottomButtonEvent();
+
+      expect(watchFace.scrollTop).toEqual(40);
+
+    });
+  });
+
+  describe('#bottomButtonEventLocked', () => {
+    it('stay at homePage', () => {
+      const props = {
+        watchFace: () => { },
+        locked: true,
+      };
+
+      const page = new HomePage(props);
+
+      page.bottomButtonEvent();
+
+      expect(watchFace.scrollTop).not.toEqual(40);
+
+    });
+  });
+
+  describe("#topButtonEventUnlocked", () => {
+    it("should take the user to the alarm page", () => {
       const props = { navigate: () => {} };
 
       const page = new HomePage(props);
       spyOn(page, "navigate");
 
-      page.bottomButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith("survey");
-
+      page.topButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith("alarmTemp");
     });
   });
 
-  describe("#topButtonEvent", () => {
+  describe("#topButtonEventUnlocked", () => {
     it("should take the user to the alarm page", () => {
       const props = { navigate: () => {} };
 
@@ -68,7 +97,6 @@ describe('HomePage', () => {
   it('should take the user to the demo page', () => {
     const props = {
       navigate: () => { },
-
     };
 
     const page = new HomePage(props);

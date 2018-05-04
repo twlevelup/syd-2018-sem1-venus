@@ -16,24 +16,28 @@ class HomePage extends BasePage {
     return compiledTemplate(context);
   }
 
-  rightButtonEvent() {
-    if (this.policeCalled == true) {
-      this.navigate('policeNotifications');
-    } else {
-      this.navigate('callPolice');
+    rightButtonEvent() {
+      if (!this.locked){
+        this.navigate('callPolice');
+      }
     }
-  }
 
-  leftButtonEvent() {
-    this.navigate("demo");
-  }
+    leftButtonEvent() {
+      if (!this.locked){
+        this.navigate("demo");
+      }
+    }
 
-  topButtonEvent() {
-    this.navigate("alarmTemp");
-  }
+    topButtonEvent() {
+      if (!this.locked){
+        this.navigate("alarmTemp");
+      }
+    }
 
-  bottomButtonEvent() {
-    this.navigate("survey");
+    bottomButtonEvent() {
+      if (!this.locked){
+        this.watchFace.scrollTop += 40;
+    }
   }
 }
 

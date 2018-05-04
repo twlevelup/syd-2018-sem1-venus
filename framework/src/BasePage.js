@@ -4,7 +4,7 @@ class BasePage {
     this.navigate = props.navigate;
     this.watchFace = props.watchFace;
     this.notificationHandler = props.notificationHandler;
-    this.policeCalled = props.policeCalled | false;
+    this.locked = props.locked | false;
   }
 
   template() {
