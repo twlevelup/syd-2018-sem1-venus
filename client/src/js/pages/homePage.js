@@ -36,7 +36,7 @@ class HomePage extends BasePage {
 
     bottomButtonEvent() {
       if (!this.locked){
-        this.watchFace.scrollTop += 40;
+        this.navigate("surveyNotificationsLog");
     }
   }
 }

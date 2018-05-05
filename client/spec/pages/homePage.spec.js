@@ -41,17 +41,6 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#bottomButtonEventUnlocked', () => {
-    it('scrolls page down', () => {
-
-      const page = new HomePage({ watchFace });
-
-      page.bottomButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(40);
-
-    });
-  });
 
   describe('#bottomButtonEventLocked', () => {
     it('stay at homePage', () => {
@@ -69,15 +58,15 @@ describe('HomePage', () => {
     });
   });
 
-  describe("#topButtonEventUnlocked", () => {
-    it("should take the user to the alarm page", () => {
+  describe("#bottomButtonEventUnlocked", () => {
+    it("should take the user to the survey notifications log page", () => {
       const props = { navigate: () => {} };
 
       const page = new HomePage(props);
       spyOn(page, "navigate");
 
-      page.topButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith("alarmTemp");
+      page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith("surveyNotificationsLog");
     });
   });
 

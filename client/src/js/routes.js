@@ -10,6 +10,7 @@ const PoliceNotificationsPage = require("./pages/policeNotificationsPage");
 const CancelCallPolicePage = require("./pages/cancelCallPolicePage");
 const SurveyPage = require("./pages/surveyPage");
 const SurveySubmitPage = require("./pages/surveySubmitPage");
+const SurveyNotificationsLogPage = require("./pages/surveyNotificationsLogPage");
 
 module.exports = {
   "/": HomePage,
@@ -23,5 +24,6 @@ module.exports = {
   "policeNotifications": PoliceNotificationsPage,
   "cancelCallPolicePage": CancelCallPolicePage,
   "survey": SurveyPage,
-  "surveySubmit": SurveySubmitPage
+  "surveySubmit": SurveySubmitPage,
+  "surveyNotificationsLog": SurveyNotificationsLogPage
 };

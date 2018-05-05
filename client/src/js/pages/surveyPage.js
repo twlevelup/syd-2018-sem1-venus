@@ -38,9 +38,9 @@ class SurveyPage extends BasePage {
  faceButtonEvent() {
    this.navigate('surveySubmit');
   }
-   
+
   topButtonEvent() {
-   this.navigate('/');
+   this.navigate('surveyNotificationsLog');
   }
 }
 
