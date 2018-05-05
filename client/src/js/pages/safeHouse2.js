@@ -1,5 +1,5 @@
 const BasePage = require("watch-framework").BasePage;
-const compiledTemplate = require("../../templates/safeHouse2.hbs");
+const compiledTemplate = require("../../templates/safehouse2.hbs");
 
 let potentialResponses = [1, 2, 3];
 let index = 1;
