@@ -6,6 +6,10 @@ class SurveySubmitPage extends BasePage {
   template() {
     return compiledTemplate();
   }
+  faceButtonEvent() {
+    this.navigate('/');
+  }
+
 }
 
 module.exports = SurveySubmitPage;

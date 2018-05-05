@@ -13,4 +13,17 @@ describe("The Submit Page", () => {
       expect(page.template()).toContain("Thank you for your response");
     });
   });
+
+  describe("#faceButtonEvent", () => {
+    it("should take user to home page", () => {
+      const props = { navigate: () => {} };
+
+      const page = new SurveySubmitPage(props);
+      spyOn(page, "navigate");
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith("/");
+    });
+  });
+
 });

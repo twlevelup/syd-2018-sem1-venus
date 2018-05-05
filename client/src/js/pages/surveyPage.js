@@ -37,10 +37,11 @@ class SurveyPage extends BasePage {
   }
  faceButtonEvent() {
    this.navigate('surveySubmit');
- }
- // bottomButtonEvent() {
- //   this.navigate('/');
- // }
+  }
+   
+  topButtonEvent() {
+   this.navigate('/');
+  }
 }
 
 module.exports = SurveyPage;
