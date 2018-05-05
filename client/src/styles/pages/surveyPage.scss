@@ -30,25 +30,21 @@ input + svg {
 }
 
 
-input[class="1"]:hover + svg,
 input[class="1"]:checked + svg,
 input[class="1"]:focus + svg {
   fill: rgb(0, 204, 79);
 }
 
-input[class="2"]:hover + svg,
 input[class="2"]:checked + svg,
 input[class="2"]:focus + svg {
   fill: rgb(232, 214, 0);
 }
 
-input[class="3"]:hover + svg,
 input[class="3"]:checked + svg,
 input[class="3"]:focus + svg {
   fill: rgb(229, 132, 0);
 }
 
-input[class="4"]:hover + svg,
 input[class="4"]:checked + svg,
 input[class="4"]:focus + svg {
   fill: rgb(239, 42, 16);
