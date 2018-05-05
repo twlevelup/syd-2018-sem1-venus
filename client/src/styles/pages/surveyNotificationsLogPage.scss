@@ -7,14 +7,19 @@ th {
     background-color: dimgrey;
   }
 
+#watch-face{
+  font-family: Arial;
+}
   table {
       // border-spacing: 5px;
+      font-family: Arial;
       width: 90%;
 
   }
 
   .scroll-down-label {
-    padding-top: 30px;
+    margin-top: 20px;
+    padding-top: 0px;
     padding-left: 56px;
   }
 
