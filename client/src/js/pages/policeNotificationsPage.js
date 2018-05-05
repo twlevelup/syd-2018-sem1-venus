@@ -6,6 +6,7 @@ const eta_time = new Date(Date.now() + diff*60000).toLocaleString().split(",")[1
 
 class policeNotificationsPage extends BasePage {
   template() {
+    console.log("policeNotifications flag is ", this.policeCalled);
     const context = {
       eta_time: eta_time,
       time: time

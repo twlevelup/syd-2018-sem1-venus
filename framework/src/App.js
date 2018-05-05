@@ -5,13 +5,15 @@ const NotificationForm = require('./NotificationForm');
 const NotificationHub = require('./NotificationHub');
 
 module.exports = class App {
-  constructor(routes, notifications) {
+  constructor(routes, notifications, storage) {
     this.navigate = this.navigate.bind(this);
     this.navigateToLocation = this.navigateToLocation.bind(this);
     this.render = this.render.bind(this);
     this.setupEventListeners = this.setupEventListeners.bind(this);
 
     this.routes = routes;
+    console.log('app', storage)
+    this.localStorage = storage;
     this.notificationForm = new NotificationForm(notifications, this.render);
 
     this.watchFace = document.getElementById("watch-face");
@@ -27,6 +29,7 @@ module.exports = class App {
 
     NotificationHub.onHide(hideNotification);
   }
+
 
   navigateToLocation(location, props = {}) {
     let path = location.hash.slice(1);
@@ -59,6 +62,7 @@ module.exports = class App {
   }
 
   navigate(path, props = {}) {
+    console.log('navigate in app')
     this.props = props;
     const Page = this.routes[path] || this.routes["404"];
     this.render(this.watchFace, Page, props);
@@ -66,11 +70,12 @@ module.exports = class App {
   }
 
   render(element, ViewType, props) {
-
+    console.log('localStorage', this.localStorage)
     const view = new ViewType({
       ...props,
       navigate: this.navigate,
       watchFace: this.watchFace,
+      localStorage: this.localStorage,
     })
 
     this.setupEventListeners(view);

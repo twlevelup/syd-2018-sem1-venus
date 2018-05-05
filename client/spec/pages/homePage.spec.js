@@ -15,16 +15,40 @@ describe('HomePage', () => {
   });
 
   describe('#rightButtonEventUnlocked', () => {
-    it('goes to call police page', () => {
+    it('goes to call police page, if police have not previously been called', () => {
       const props = {
         navigate: () => { },
+        localStorage: {
+          getItem: (key) => {
+            return "false";
+          },
+        },
       };
+
       const page = new HomePage(props);
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('callPolice');
     });
+
+    it('goes to eta page, if police have previously been called', () => {
+      const props = {
+        navigate: () => { },
+        localStorage: {
+          getItem: (key) => {
+            return "true";
+          },
+        },
+      };
+
+      const page = new HomePage(props);
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('policeNotifications');
+    });
+
   });
 
   describe('#rightButtonEventLocked', () => {

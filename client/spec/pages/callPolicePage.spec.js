@@ -17,6 +17,9 @@ describe("The Call Police Page", () => {
     it('should take the user to the police notifications page', () => {
       const props = {
         navigate: () => { },
+        localStorage: {
+          setItem: () => { },
+        },
       };
 
       const page = new CallPolicePage(props);

@@ -6,8 +6,15 @@ const date = new Date(Date.now()).toLocaleString().split(",")[0];
 const time = new Date(Date.now()).toLocaleString().split(",")[1];
 const compiledTemplate = require("../../templates/homePage.hbs");
 
+//isCallPolice = false
+
 class HomePage extends BasePage {
   template() {
+     // console.log("template iscalled", isCallPolice);
+     // if (this.localStorage.getItem("policeCalled") === "true" && !isCallPolice) {
+     //   console.log("template",  this.localStorage)
+     //   this.localStorage.setItem("policeCalled", false);
+     // }
     const context = {
       date: date,
       time: time,
@@ -18,7 +25,13 @@ class HomePage extends BasePage {
 
     rightButtonEvent() {
       if (!this.locked){
-        this.navigate('callPolice');
+        console.log(this.localStorage)
+        if (this.localStorage.getItem("policeCalled") === "true") {
+          console.log("going to police notifications");
+          this.navigate('policeNotifications');
+        } else {
+          this.navigate('callPolice');
+        }
       }
     }
 

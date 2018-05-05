@@ -17,6 +17,9 @@ describe("The Cancel Call Police Page", () => {
     it('should take the user to the homepage', () => {
       const props = {
         navigate: () => { },
+        localStorage: {
+          setItem: () => { },
+        },
       };
 
       const page = new CancelCallPolicePage(props);

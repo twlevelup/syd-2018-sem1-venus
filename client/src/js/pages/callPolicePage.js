@@ -12,6 +12,7 @@ class CallPolicePage extends BasePage {
    this.navigate('/');
  }
   faceButtonEvent() {
+    this.localStorage.setItem("policeCalled", true);
     this.navigate('policeNotifications');
   }
 
