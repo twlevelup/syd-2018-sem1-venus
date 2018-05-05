@@ -11,7 +11,8 @@ const CancelCallPolicePage = require("./pages/cancelCallPolicePage");
 const SurveyPage = require("./pages/surveyPage");
 const SurveySubmitPage = require("./pages/surveySubmitPage");
 const SurveyNotificationsLogPage = require("./pages/surveyNotificationsLogPage");
-
+const SafeHousePage = require("./pages/safeHouse");
+const SafeHouse2Page = require("./pages/safeHouse2")
 module.exports = {
   "/": HomePage,
   "contacts": ContactsPage,
@@ -25,5 +26,7 @@ module.exports = {
   "cancelCallPolicePage": CancelCallPolicePage,
   "survey": SurveyPage,
   "surveySubmit": SurveySubmitPage,
-  "surveyNotificationsLog": SurveyNotificationsLogPage
+  "surveyNotificationsLog": SurveyNotificationsLogPage,
+  "safeHouse": SafeHousePage,
+  "safeHouse2": SafeHouse2Page
 };

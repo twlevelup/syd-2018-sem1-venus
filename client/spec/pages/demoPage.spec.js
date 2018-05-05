@@ -8,9 +8,9 @@ describe('The Demo Page', () => {
   });
 
   describe('#template', () => {
-    it('should contain the correct text', () => {
+    it('should contain legal aid', () => {
       const page = new DemoPage();
-      expect(page.template()).toContain('This is a demo using handlebars');
+      expect(page.template()).toContain('Legal Aid');
     });
   });
 });
