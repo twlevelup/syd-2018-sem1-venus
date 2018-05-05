@@ -13,6 +13,7 @@ class AlarmPage extends BasePage {
     return compiledTemplate();
   }
   bottomButtonEvent() {
+    sound.pause();
     this.navigate("/");
   }
   faceButtonEvent() {
