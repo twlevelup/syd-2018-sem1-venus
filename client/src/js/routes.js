@@ -13,7 +13,7 @@ const SurveyPage2 = require("./pages/surveyPage2");
 const SurveySubmitPage = require("./pages/surveySubmitPage");
 const SurveyNotificationsLogPage = require("./pages/surveyNotificationsLogPage");
 const SafeHousePage = require("./pages/safeHouse");
-const SafeHouse2Page = require("./pages/safeHouse2")
+const SafeHouse2Page = require("./pages/safeHouse2");
 module.exports = {
   "/": HomePage,
   "contacts": ContactsPage,
